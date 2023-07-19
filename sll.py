@@ -129,13 +129,13 @@ class LinkedList:
         TODO: Write this implementation
         """
         count = 0
-        if self._head.value == value:
-            count += 1
-        node = self._head.next
+        node = self._head
         while node.next != None:
             if node.value == value:
                 count += 1
             node = node.next
+        if node.value == value:
+            count += 1
         return count
 
     def find(self, value: object) -> bool:
