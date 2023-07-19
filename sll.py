@@ -116,11 +116,11 @@ class LinkedList:
         node = self._head
         next_node = self._head.next
         while node.next != None:
-            if node.next == value:
+            if node.next.value == value:
                 node.next = next_node.next
                 return True
             else:
-                node = node.next
+                node = next_node
                 next_node = next_node.next
         return False
 
