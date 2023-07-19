@@ -114,12 +114,14 @@ class LinkedList:
         TODO: Write this implementation
         """
         node = self._head
+        next_node = self._head.next
         while node.next != None:
             if node.next == value:
-                node.next = node.next.next
+                node.next = next_node.next
                 return True
             else:
-                node = node.next
+                node = next_node
+                next_node = next_node.next
         return False
 
     def count(self, value: object) -> int:
