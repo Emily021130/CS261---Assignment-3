@@ -143,10 +143,12 @@ class LinkedList:
         TODO: Write this implementation
         """
         node = self._head
-        while node.next.next != None:
+        while node.next != None:
             if node.value == value:
                 return True
             node = node.next
+        if node.value == value:
+            return True
         return False
 
     def slice(self, start_index: int, size: int) -> "LinkedList":
