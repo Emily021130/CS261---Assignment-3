@@ -69,7 +69,7 @@ class Stack:
         """
         if self.size == 0:
             raise StackException
-        return self._da[self._da._size - 1]
+        return self._da[self._da.length() - 1]
 
 
 # ------------------- BASIC TESTING -----------------------------------------
