@@ -67,7 +67,7 @@ class Stack:
         """
         TODO: Write this implementation
         """
-        if self.size == 0:
+        if self.is_empty() is True:
             raise StackException
         return self._da[self._da.length() - 1]
 
