@@ -130,7 +130,7 @@ class LinkedList:
         """
         count = 0
         node = self._head
-        while node.next != None:
+        while node.next.next != None:
             if node.value == value:
                 count += 1
             node = node.next
