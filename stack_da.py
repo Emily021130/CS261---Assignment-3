@@ -62,11 +62,14 @@ class Stack:
         """
         pass
 
+
     def top(self) -> object:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.size == 0:
+            raise StackException
+        return self._da[self._da._size - 1]
 
 
 # ------------------- BASIC TESTING -----------------------------------------
