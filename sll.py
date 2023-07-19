@@ -120,7 +120,7 @@ class LinkedList:
                 node.next = next_node.next
                 return True
             else:
-                node = next_node
+                node = node.next
                 next_node = next_node.next
         return False
 
