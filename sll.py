@@ -79,7 +79,14 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        pass
+        new_node = SLNode(value)
+        if self._head == None:
+            self._head = new_node
+            return
+        last_node = self._head
+        while last_node.next != None:
+            last_node = last_node.next
+        last_node.next = new_node
 
     def insert_at_index(self, index: int, value: object) -> None:
         """
