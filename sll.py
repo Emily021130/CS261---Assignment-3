@@ -128,7 +128,13 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        pass
+        count = 0
+        node = self._head
+        while node.next != None:
+            if node.value == value:
+                count += 1
+            node = node.next
+        return count
 
     def find(self, value: object) -> bool:
         """
