@@ -129,8 +129,10 @@ class LinkedList:
         TODO: Write this implementation
         """
         count = 0
-        node = self._head
-        while node.next.next != None:
+        if self._head.value == value:
+            count += 1
+        node = self._head.next
+        while node.next != None:
             if node.value == value:
                 count += 1
             node = node.next
