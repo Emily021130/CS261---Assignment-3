@@ -66,11 +66,11 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        if self.is_empty() is True:
+        """if self.is_empty() is True:
             self.head = SLNode(value)
         else:
             self._tail.next = SLNode(value)
-            self._tail = SLNode(value)
+            self._tail = SLNode(value)"""
 
     def dequeue(self) -> object:
         """
@@ -82,7 +82,10 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.is_empty() is True:
+            raise QueueException
+        else:
+            return self._head.value
 
 
 # ------------------- BASIC TESTING -----------------------------------------
