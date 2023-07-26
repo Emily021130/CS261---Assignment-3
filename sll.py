@@ -116,7 +116,8 @@ class LinkedList:
             previous_node = previous_node.next
             current_node = current_node.next
             count += 1
-        previous_node.next = current_node.next
+        node = current_node.next
+        previous_node.next = node
 
     def remove(self, value: object) -> bool:
         """
