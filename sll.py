@@ -100,7 +100,7 @@ class LinkedList:
             previous_node = previous_node.next
             count += 1
         new_node = SLNode(value)
-        new_node.next = previous_node
+        new_node.next = previous_node.next
         previous_node.next = new_node
 
     def remove_at_index(self, index: int) -> None:
