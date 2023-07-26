@@ -72,7 +72,7 @@ class Queue:
         """
         if self._current_size == self._sa.length():
             self._double_queue()
-        self._back = self._increment(self._back)
+        self._back = (self._back + 1) % self._sa._size
         self._sa[self._back] = value
         self._current_size += 1
 
