@@ -109,12 +109,14 @@ class LinkedList:
         """
         if index < 0 or index > self.length():
             raise SLLException
-        current_node = self._head
+        previous_node = self._head
+        current_node = self._head.next
         count = 0
         while count != index:
+            previous_node = previous_node.next
             current_node = current_node.next
             count += 1
-        current_node.next = current_node.next.next
+        previous_node.next = current_node.next
 
     def remove(self, value: object) -> bool:
         """
