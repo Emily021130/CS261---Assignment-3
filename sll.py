@@ -175,7 +175,7 @@ class LinkedList:
         while count < start_index:
             current_index = current_index.next
             count += 1
-        new_linkedlist_copy = new_linkedlist._head
+        current_index = current_index.next
         size_count = 0
         while size_count != size:
             new_linkedlist.insert_at_index(size_count, current_index.value)
