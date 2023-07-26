@@ -70,8 +70,8 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        if self._current_size > self._sa.length():
-            new_array = StaticArray(self.size() * 2)
+        if self._current_size == self._sa.length():
+            self._double_queue()
         self._back = self._increment(self._back)
         self._sa[self._back] = value
         self._current_size += 1
