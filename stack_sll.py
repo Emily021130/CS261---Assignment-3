@@ -87,7 +87,10 @@ class Stack:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.is_empty() is True:
+            raise StackException
+        else:
+            return self._head.value
 
 # ------------------- BASIC TESTING -----------------------------------------
 
