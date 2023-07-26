@@ -165,7 +165,7 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        if start_index < 0 or start_index >= self.length() or start_index + size > self.length():
+        if start_index < 0 or size < 0 or start_index >= self.length() or start_index + size > self.length():
             raise SLLException
         new_linkedlist = LinkedList()
         if size == 0:
