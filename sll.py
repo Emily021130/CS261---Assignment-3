@@ -165,8 +165,26 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        pass
+        if start_index < 0 or start_index >= self.length() or start_index + size > self.length():
+            raise SLLException
+        new_linkedlist = LinkedList()
+        if size == 0:
+            return new_linkedlist
+        current_index = self._head
+        count = 0
+        while count < start_index:
+            current_index = current_index.next
+            count += 1
+        new_linkedlist_copy = new_linkedlist._head
+        size_count = 0
+        while size_count != size:
+            new_linkedlist.insert_at_index(size_count, current_index.value)
+            size_count += 1
+            current_index = current_index.next
+        return new_linkedlist
 
+
+# ------------------- BASIC TESTING -----------------------------------------
 
 if __name__ == "__main__":
 
