@@ -70,11 +70,11 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        if self._current_size == self._sa.length():
+        """if self._current_size == self._sa.length():
             self._double_queue()
         self._back = (self._back + 1) % self._sa._size
         self._sa[self._back] = value
-        self._current_size += 1
+        self._current_size += 1"""
 
     def dequeue(self) -> object:
         """
@@ -86,7 +86,9 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.is_empty() is True:
+            raise QueueException
+        return self._sa[self._front]
 
     # The method below is optional, but recommended, to implement. #
     # You may alter it in any way you see fit.                     #
