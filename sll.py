@@ -92,7 +92,7 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        if index < 0 or index > self.length():
+        """if index < 0 or index > self.length():
             raise SLLException
         new_node = SLNode(value)
         previous_node = self._head
@@ -101,13 +101,21 @@ class LinkedList:
             previous_node = previous_node.next
             count += 1
         new_node.next = previous_node
-        previous_node.next = new_node
+        previous_node.next = new_node"""
 
     def remove_at_index(self, index: int) -> None:
         """
         TODO: Write this implementation
         """
-        pass
+        if index < 0 or index > self.length():
+            raise SLLException
+        current_node = self._head
+        count = 0
+        while count != index:
+            current_node = current_node.next
+            count += 1
+        new_node = current_node.next.next
+        current_node.next = new_node
 
     def remove(self, value: object) -> bool:
         """
