@@ -76,7 +76,12 @@ class Stack:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.is_empty() is True:
+            raise StackException
+        else:
+            value_to_pop = self._head
+            self._head = self._head.next
+            return value_to_pop
 
     def top(self) -> object:
         """
