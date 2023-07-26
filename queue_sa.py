@@ -86,9 +86,9 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        if self.is_empty():
+        """if self.is_empty() is True:
             raise QueueException
-        return self._sa[self._front]
+        return self._sa[self._front]"""
 
     # The method below is optional, but recommended, to implement. #
     # You may alter it in any way you see fit.                     #

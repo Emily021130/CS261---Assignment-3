@@ -65,7 +65,11 @@ class Stack:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.is_empty() is True:
+            self._head = SLNode(value)
+        new_node = SLNode(value, self._head)
+        new_node.next = self._head
+        self._head = new_node
 
     def pop(self) -> object:
         """
