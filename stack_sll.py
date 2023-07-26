@@ -79,7 +79,7 @@ class Stack:
         if self.is_empty() is True:
             raise StackException
         else:
-            value_to_pop = self._head
+            value_to_pop = self._head.value
             self._head = self._head.next
             return value_to_pop
 
