@@ -70,7 +70,11 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        pass
+        if self._current_size > self._sa.length():
+            new_array = StaticArray(self.size() * 2)
+        self._back = self._increment(self._back)
+        self._sa[self._back] = value
+        self._current_size += 1
 
     def dequeue(self) -> object:
         """

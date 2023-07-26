@@ -107,7 +107,7 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        if index < 0 or index > self.length():
+        """if index < 0 or index > self.length():
             raise SLLException
         current_node = self._head
         count = 0
@@ -115,7 +115,7 @@ class LinkedList:
             current_node = current_node.next
             count += 1
         new_node = current_node.next.next
-        current_node.next = new_node
+        current_node.next = new_node"""
 
     def remove(self, value: object) -> bool:
         """
