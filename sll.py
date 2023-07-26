@@ -107,7 +107,7 @@ class LinkedList:
         """
         TODO: Write this implementation
         """
-        if index < 0 or index > self.length():
+        if index < 0 or index >= self.length():
             raise SLLException
         previous_node = self._head
         current_node = self._head.next
