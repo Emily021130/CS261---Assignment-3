@@ -82,7 +82,7 @@ class Queue:
         """
         if self.is_empty() is True:
             raise QueueException
-        value_remove = self._sa[self._back]
+        value_remove = self._sa[self._front]
         self._front = self._increment(self._front)
         self._current_size -= 1
         return value_remove
