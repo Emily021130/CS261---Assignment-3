@@ -66,7 +66,7 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        if self.is_empty() is True:
+        if self.is_empty():
             self._head = SLNode(value)
             self._tail = SLNode(value)
         else:
