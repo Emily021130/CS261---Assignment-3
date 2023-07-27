@@ -68,9 +68,10 @@ class Queue:
         """
         if self.is_empty() is True:
             self._head = SLNode(value)
+            self._tail = SLNode(value)
         else:
             self._tail.next = SLNode(value)
-        self._tail = SLNode(value)
+            self._tail = SLNode(value)
 
     def dequeue(self) -> object:
         """
@@ -81,7 +82,7 @@ class Queue:
         else:
             value_to_remove = self._head.value
             self._head = self._head.next
-        return value_to_remove
+            return value_to_remove
 
     def front(self) -> object:
         """
