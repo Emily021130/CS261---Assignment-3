@@ -80,9 +80,8 @@ class Queue:
             raise QueueException
         else:
             value_to_remove = self._head.value
-            remove = self._head
-            self._head = remove.next
-            return value_to_remove
+            self._head = self._head.next
+        return value_to_remove
 
     def front(self) -> object:
         """
