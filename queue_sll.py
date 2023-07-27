@@ -67,7 +67,7 @@ class Queue:
         TODO: Write this implementation
         """
         if self.is_empty() is True:
-            self._head = self._tail = SLNode(value)
+            self._head = SLNode(value)
         else:
             self._tail.next = SLNode(value)
         self._tail = SLNode(value)
@@ -79,9 +79,9 @@ class Queue:
         if self.is_empty() is True:
             raise QueueException
         else:
-            remove = self._head.value
+            remove = self._head
             self._head = remove.next
-            return remove
+            return remove.value
 
     def front(self) -> object:
         """
