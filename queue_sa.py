@@ -70,6 +70,8 @@ class Queue:
         """
         TODO: Write this implementation
         """
+        if self.is_empty() is True:
+            raise QueueException
         if self._current_size == self._sa.length():
             self._double_queue()
         self._back = self._increment(self._back)
