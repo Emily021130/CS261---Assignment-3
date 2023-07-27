@@ -69,8 +69,9 @@ class Queue:
         if self.is_empty() is True:
             self._head = SLNode(value)
         else:
-            self._tail.next = SLNode(value)
+            remain_tail = self._tail
             self._tail = SLNode(value)
+            remain_tail.next = SLNode(value)
 
     def dequeue(self) -> object:
         """
