@@ -71,7 +71,7 @@ class Queue:
             self._tail = SLNode(value)
         else:
             self._tail.next = SLNode(value)
-            self._tail = self._tail.next
+            self._tail = SLNode(value)
 
     def dequeue(self) -> object:
         """
