@@ -3,7 +3,8 @@
 # Course: CS261 - Data Structures
 # Assignment: Assignment 3
 # Due Date: 07/24/2023
-# Description:
+# Description: Implement a Singly Linked List data structure which includes eight methods to
+#              insert, remove, count and find values.
 
 
 from SLNode import *
@@ -69,7 +70,7 @@ class LinkedList:
 
     def insert_front(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add a new node at the beginning of the list right after the front sentinel.
         """
         new_node = SLNode(value)
         new_node.next = self._head.next
@@ -77,7 +78,7 @@ class LinkedList:
 
     def insert_back(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add a new node at the end of the list.
         """
         new_node = SLNode(value)
         if self._head == None:
@@ -90,7 +91,8 @@ class LinkedList:
 
     def insert_at_index(self, index: int, value: object) -> None:
         """
-        TODO: Write this implementation
+        Inserts a new value at the specified index position in the linked list while index 0 refers to
+        the beginning of the list. Raise a custom "SLLException" if the provided index is invalid.
         """
         if index < 0 or index > self.length():
             raise SLLException
@@ -105,7 +107,8 @@ class LinkedList:
 
     def remove_at_index(self, index: int) -> None:
         """
-        TODO: Write this implementation
+        Remove the node at the specified index position from the linked list while index 0 refers to
+        the beginning of the list. Raise a custom "SLLException" if the provided index is invalid.
         """
         if index < 0 or index >= self.length():
             raise SLLException
@@ -121,7 +124,8 @@ class LinkedList:
 
     def remove(self, value: object) -> bool:
         """
-        TODO: Write this implementation
+        Traverse the list from the beginning to the end, and remove the first node that matches the
+        provided value. Return True if a node is removed from the list and return False otherwise.
         """
         node = self._head
         next_node = self._head.next
@@ -136,7 +140,7 @@ class LinkedList:
 
     def count(self, value: object) -> int:
         """
-        TODO: Write this implementation
+        Count the number of elements in the list that match the provided value and return the number.
         """
         count = 0
         node = self._head
@@ -150,7 +154,7 @@ class LinkedList:
 
     def find(self, value: object) -> bool:
         """
-        TODO: Write this implementation
+        Return a Boolean value based on whether or no the provided value exists in the list.
         """
         node = self._head
         while node.next != None:
@@ -163,7 +167,10 @@ class LinkedList:
 
     def slice(self, start_index: int, size: int) -> "LinkedList":
         """
-        TODO: Write this implementation
+        Return a new LinkedList that contains the requested number of nodes from the original list,
+        starting with the node located at the requested start index. Raise a custom "SLLException"
+        if the provided start index is invalid, or if there are not enough nodes between the start
+        index and the end of the list to make a slice of the requested size.
         """
         if start_index < 0 or size < 0 or start_index >= self.length() or start_index + size > self.length():
             raise SLLException

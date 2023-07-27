@@ -3,7 +3,7 @@
 # Course: CS261 - Data Structures
 # Assignment: Assignment 3
 # Due Date: 07/24/2023
-# Description: T
+# Description: Implement a Queue ADT class which includes enqueue(), dequeue() and front() methods.
 
 
 from SLNode import SLNode
@@ -64,7 +64,7 @@ class Queue:
 
     def enqueue(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add a new value to the end of the queue.
         """
         node = SLNode(value)
         if self.is_empty() is True:
@@ -76,7 +76,8 @@ class Queue:
 
     def dequeue(self) -> object:
         """
-        TODO: Write this implementation
+        Remove and return the value from the beginning of the queue. Raise a custom "QueueException"
+        if the queue is empty.
         """
         if self.is_empty() is True:
             raise QueueException
@@ -87,7 +88,8 @@ class Queue:
 
     def front(self) -> object:
         """
-        TODO: Write this implementation
+        Return the value of the front element of the queue without removing it. Raise a custom
+        "QueueException" if the queue is empty.
         """
         if self.is_empty() is True:
             raise QueueException

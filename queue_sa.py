@@ -3,7 +3,8 @@
 # Course: CS261 - Data Structures
 # Assignment: Assignment 3
 # Due Date: 07/24/2023
-# Description:
+# Description: Implement a Queue ADT class that utilizes a circular buffer which includes enqueue(),
+#              dequeue() and front() methods.
 
 
 # Note: Changing any part of the pre-implemented methods (besides adding  #
@@ -68,7 +69,7 @@ class Queue:
 
     def enqueue(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add a new value to the end of the queue.
         """
         if self._current_size == self._sa.length():
             self._double_queue()
@@ -78,7 +79,8 @@ class Queue:
 
     def dequeue(self) -> object:
         """
-        TODO: Write this implementation
+        Remove and return the value at the beginning of the queue. Raise a custom "QueueException"
+        if the queue is empty.
         """
         if self.is_empty() is True:
             raise QueueException
@@ -89,7 +91,8 @@ class Queue:
 
     def front(self) -> object:
         """
-        TODO: Write this implementation
+        Return the value of the front element of the queue without removing it. Raise a custom
+        "QueueException" if the queue is empty.
         """
         if self.is_empty() is True:
             raise QueueException
@@ -100,7 +103,7 @@ class Queue:
 
     def _double_queue(self) -> None:
         """
-        TODO: Write this implementation
+        Double the current length of array to resize it. Help for function enqueue().
         """
         new_array = StaticArray(self._sa.length() * 2)
         for index in range(self._current_size):

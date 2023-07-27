@@ -1,9 +1,9 @@
-# Name:
-# OSU Email:
+# Name: Shuyao Zeng
+# OSU Email: zengs@oregonstate.edu
 # Course: CS261 - Data Structures
-# Assignment:
-# Due Date:
-# Description:
+# Assignment: Assignment 3
+# Due Date: 07/24/2023
+# Description: Implement a Stack ADT class which includes push(), pop() and top() methods.
 
 
 from SLNode import SLNode
@@ -63,7 +63,7 @@ class Stack:
 
     def push(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add a new element to the top of the stack.
         """
         if self.is_empty() is True:
             self._head = SLNode(value)
@@ -74,7 +74,8 @@ class Stack:
 
     def pop(self) -> object:
         """
-        TODO: Write this implementation
+        Remove the top element from the stack and return its value. Raise a custom "StackException"
+        if the stack is empty.
         """
         if self.is_empty() is True:
             raise StackException
@@ -85,7 +86,8 @@ class Stack:
 
     def top(self) -> object:
         """
-        TODO: Write this implementation
+        Return the value of the top element of the stack without removing it. Raise a custom
+        "StackException" if the stack is empty.
         """
         if self.is_empty() is True:
             raise StackException

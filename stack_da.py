@@ -3,7 +3,7 @@
 # Course: CS261 - Data Structures
 # Assignment: Assignment 3
 # Due Date: 07/24/2023
-# Description:
+# Description: Implement a Stack ADT class which includes push(), pop() and top() methods.
 
 
 from dynamic_array import *
@@ -52,13 +52,14 @@ class Stack:
 
     def push(self, value: object) -> None:
         """
-        TODO: Write this implementation
+        Add a new element to the top of the stack.
         """
         self._da.append(value)
 
     def pop(self) -> object:
         """
-        TODO: Write this implementation
+        Remove the top element from the stack and return its value. Raise a custom "StackException"
+        if the stack is empty.
         """
         if self.is_empty() is True:
             raise StackException
@@ -68,7 +69,8 @@ class Stack:
 
     def top(self) -> object:
         """
-        TODO: Write this implementation
+        Return the value of the top element of the stack without removing it. Raise a custom "StackException"
+        if the stack is empty.
         """
         if self.is_empty() is True:
             raise StackException
