@@ -70,12 +70,12 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        """if self._current_size == self._sa.length():
-            self._sa.length = self._sa._size * 2
+        if self._current_size == self._sa.length():
+            self._double_queue()
         else:
             self._back = (self._back + 1) % self._sa._size
             self._sa[self._back] = value
-            self._current_size += 1"""
+            self._current_size += 1
 
     def dequeue(self) -> object:
         """
@@ -99,7 +99,13 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        pass
+        new_array = StaticArray(self._sa.length() * 2)
+        for index in range(self._current_size):
+            new_array[index] = self._sa[self._front]
+            self._front = self._increment(self._front)
+        self._front = 0
+        self._back = self._current_size - 1
+        self._sa = new_array
 
 
 # ------------------- BASIC TESTING -----------------------------------------
