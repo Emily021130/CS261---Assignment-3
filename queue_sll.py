@@ -79,9 +79,10 @@ class Queue:
         if self.is_empty() is True:
             raise QueueException
         else:
+            value_to_remove = self._head.value
             remove = self._head
             self._head = remove.next
-            return remove.value
+            return value_to_remove
 
     def front(self) -> object:
         """
