@@ -70,8 +70,6 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        if self.is_empty() is True:
-            raise QueueException
         if self._current_size == self._sa.length():
             self._double_queue()
         self._back = self._increment(self._back)
@@ -82,7 +80,12 @@ class Queue:
         """
         TODO: Write this implementation
         """
-        pass
+        if self.is_empty() is True:
+            raise QueueException
+        value_remove = self._sa[self._back]
+        self._front = self._increment(self._front)
+        self._current_size -= 1
+        return value_remove
 
     def front(self) -> object:
         """
