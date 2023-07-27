@@ -76,7 +76,7 @@ class Queue:
         TODO: Write this implementation
         """
         if self.is_empty() is True:
-            raise QueueException
+            raise QueueException()
         remove = self._head
         self._head = remove.next
         return remove.value
@@ -86,7 +86,7 @@ class Queue:
         TODO: Write this implementation
         """
         if self.is_empty() is True:
-            raise QueueException
+            raise QueueException()
         return self._head.value
 
 
