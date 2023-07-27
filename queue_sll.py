@@ -66,13 +66,13 @@ class Queue:
         """
         TODO: Write this implementation
         """
+        node = SLNode(value)
         if self.is_empty() is True:
-            node = SLNode(value)
             self._head = node
             self._tail = node
         else:
-            self._tail.next = SLNode(value)
-            self._tail = SLNode(value)
+            self._tail.next = node
+            self._tail = node
 
     def dequeue(self) -> object:
         """
